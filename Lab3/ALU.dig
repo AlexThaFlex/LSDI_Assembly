@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<circuit>
+  <version>1</version>
+  <attributes>
+    <entry>
+      <string>Width</string>
+      <int>5</int>
+    </entry>
+  </attributes>
+  <visualElements>
+    <visualElement>
+      <elementName>opALU.dig</elementName>
+      <elementAttributes/>
+      <pos x="-140" y="-140"/>
+    </visualElement>
+    <visualElement>
+      <elementName>flags.dig</elementName>
+      <elementAttributes/>
+      <pos x="40" y="-40"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>R</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>8</int>
+        </entry>
+        <entry>
+          <string>intFormat</string>
+          <intFormat>bin</intFormat>
+        </entry>
+      </elementAttributes>
+      <pos x="240" y="-140"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>FLAGS</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>4</int>
+        </entry>
+        <entry>
+          <string>intFormat</string>
+          <intFormat>bin</intFormat>
+        </entry>
+      </elementAttributes>
+      <pos x="240" y="0"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>A</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>8</int>
+        </entry>
+        <entry>
+          <string>intFormat</string>
+          <intFormat>bin</intFormat>
+        </entry>
+      </elementAttributes>
+      <pos x="-340" y="-180"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>B</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>8</int>
+        </entry>
+        <entry>
+          <string>intFormat</string>
+          <intFormat>bin</intFormat>
+        </entry>
+      </elementAttributes>
+      <pos x="-340" y="-120"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>OPR</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>3</int>
+        </entry>
+        <entry>
+          <string>intFormat</string>
+          <intFormat>bin</intFormat>
+        </entry>
+      </elementAttributes>
+      <pos x="-340" y="40"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Splitter</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Input Splitting</string>
+          <string>8</string>
+        </entry>
+        <entry>
+          <string>Output Splitting</string>
+          <string>7,1</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-280" y="-20"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Splitter</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Input Splitting</string>
+          <string>8</string>
+        </entry>
+        <entry>
+          <string>Output Splitting</string>
+          <string>7,1</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-220" y="-40"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Text</elementName>
+      <elementAttributes>
+        <entry>
+          <string>textFontSize</string>
+          <int>17</int>
+        </entry>
+        <entry>
+          <string>Description</string>
+          <string>OPR   Valor de R (significado)
+-----------------------------------------------
+000    B (saída é igual à entrada B)
+001      A - B (diferença entre A e B)
+010      A + B (soma de A e B)
+011  A ^ B (ou-exclusivo entre A e B)
+100      A &gt;&gt; 1 (quociente da divisão de A por 2)
+101      A &lt;&lt; 1 (multiplicação de A por 2)
+110      A &amp; B (e-lógico entre os bits de A e B)
+111      A | B    (ou-lógico entre os bits de A e B)</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-260" y="80"/>
+    </visualElement>
+  </visualElements>
+  <wires>
+    <wire>
+      <p1 x="140" y="0"/>
+      <p2 x="240" y="0"/>
+    </wire>
+    <wire>
+      <p1 x="-260" y="0"/>
+      <p2 x="40" y="0"/>
+    </wire>
+    <wire>
+      <p1 x="-340" y="-180"/>
+      <p2 x="-240" y="-180"/>
+    </wire>
+    <wire>
+      <p1 x="-160" y="-100"/>
+      <p2 x="-140" y="-100"/>
+    </wire>
+    <wire>
+      <p1 x="-300" y="-20"/>
+      <p2 x="-280" y="-20"/>
+    </wire>
+    <wire>
+      <p1 x="-200" y="-20"/>
+      <p2 x="40" y="-20"/>
+    </wire>
+    <wire>
+      <p1 x="0" y="20"/>
+      <p2 x="40" y="20"/>
+    </wire>
+    <wire>
+      <p1 x="-60" y="-120"/>
+      <p2 x="-20" y="-120"/>
+    </wire>
+    <wire>
+      <p1 x="-340" y="-120"/>
+      <p2 x="-300" y="-120"/>
+    </wire>
+    <wire>
+      <p1 x="-300" y="-120"/>
+      <p2 x="-140" y="-120"/>
+    </wire>
+    <wire>
+      <p1 x="-240" y="-40"/>
+      <p2 x="-220" y="-40"/>
+    </wire>
+    <wire>
+      <p1 x="-160" y="-40"/>
+      <p2 x="40" y="-40"/>
+    </wire>
+    <wire>
+      <p1 x="-20" y="40"/>
+      <p2 x="40" y="40"/>
+    </wire>
+    <wire>
+      <p1 x="-340" y="40"/>
+      <p2 x="-160" y="40"/>
+    </wire>
+    <wire>
+      <p1 x="-60" y="-140"/>
+      <p2 x="0" y="-140"/>
+    </wire>
+    <wire>
+      <p1 x="-240" y="-140"/>
+      <p2 x="-140" y="-140"/>
+    </wire>
+    <wire>
+      <p1 x="0" y="-140"/>
+      <p2 x="240" y="-140"/>
+    </wire>
+    <wire>
+      <p1 x="0" y="-140"/>
+      <p2 x="0" y="20"/>
+    </wire>
+    <wire>
+      <p1 x="-20" y="-120"/>
+      <p2 x="-20" y="40"/>
+    </wire>
+    <wire>
+      <p1 x="-300" y="-120"/>
+      <p2 x="-300" y="-20"/>
+    </wire>
+    <wire>
+      <p1 x="-240" y="-180"/>
+      <p2 x="-240" y="-140"/>
+    </wire>
+    <wire>
+      <p1 x="-240" y="-140"/>
+      <p2 x="-240" y="-40"/>
+    </wire>
+    <wire>
+      <p1 x="-160" y="-100"/>
+      <p2 x="-160" y="-40"/>
+    </wire>
+    <wire>
+      <p1 x="-160" y="-40"/>
+      <p2 x="-160" y="40"/>
+    </wire>
+  </wires>
+  <measurementOrdering/>
+</circuit>
